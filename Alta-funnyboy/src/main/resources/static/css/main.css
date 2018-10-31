@@ -1,0 +1,84 @@
+.headpc{
+	width:100%;
+	height:138px;
+	background-color:white !important;
+	
+}
+.picture{
+	margin:28px 100px 0px 80px
+}
+.title{
+	color:#1191F2;
+	font-size:28px;
+	margin:0 auto;
+	font-family: "Microsoft YaHei" ! important;	
+}
+
+.user-main{
+	width: 590px;
+	height:350px;
+	margin:40px 0px 0px 40px;
+	float:left;
+	background-color:white !important;
+}
+
+.upload-file{
+	width: 590px;
+	height:350px;
+	margin:40px 40px 0px 32px;
+	float:left;
+	background-color:white !important;
+}
+
+.user-tab{
+	width: 590px;
+	height:350px;
+	margin:40px 0px 40px 40px;
+	float:left;
+	background-color:white !important;
+}
+
+.table-div{
+	width:100%;
+	height:264px;
+	margin:40px 0px 0px 0px;
+	background-color:white !important;
+}
+
+.table-user{
+	width:93%;
+	height:264px;
+	margin:40px 0px 0px 40px;
+	float:left;
+	background-color:white !important;
+	
+}
+
+.table-title{
+	width:1204px;
+	height:20px;
+	margin:60px 0px 20px 40px;
+	float:left;
+	
+}
+
+.table-span{
+	width:1204px;
+	height:20px;
+	margin:28px 0px 20px 15px;
+}
+
+.table_user_span{
+	float:left;
+	margin:28px 0px 0px 20px;
+	font-size:16px;
+	font-weight:bold;
+	font-family: "Microsoft YaHei" ! important;
+	
+}
+ 
+.div_center{
+	margin:0 auto;
+	width:1300px;
+	height:3000px
+	}

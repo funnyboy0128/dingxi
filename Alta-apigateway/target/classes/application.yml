@@ -1,0 +1,18 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: apigateway
+
+zuul.host.maxTotalConnections: 1000
+zuul.host.maxPerRouteConnections: 100
+
+zuul.ignoredServices: '*'
+
+zuul.routes.FUNNYBOY.path: /funnyboy/**
+zuul.routes.FUNNYBOY.serviceId: FUNNYBOY
+zuul.routes.FUNNYBOY.stripPrefix: false
+
+eureka.instance.preferIpAddress: true
+eureka.instance.metadataMap.instanceId: ${spring.application.name}:${server.port}
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/

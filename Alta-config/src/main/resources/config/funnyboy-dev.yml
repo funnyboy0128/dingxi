@@ -1,0 +1,32 @@
+################## dev 环境配置 ###########################
+server:
+  context-path: /funnyboy
+  port: 8001
+spring:
+  application:
+    name: funnyboy
+  cloud:
+    config:
+      allowOverride: true
+      overrideNone: true
+      overrideSystemProperties: false  
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.108.85.46:3306/funnyboy?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+#启用shutdown
+endpoints.shutdown.enabled: true
+#禁用密码验证
+endpoints.shutdown.sensitive: false
+
+eureka.instance.preferIpAddress: true
+eureka.instance.metadataMap.instanceId: ${spring.application.name}:${server.port}
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/

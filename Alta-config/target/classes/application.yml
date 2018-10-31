@@ -1,0 +1,41 @@
+server:
+  port: 7000
+spring:
+  profiles:
+    active: dev,native
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        prefix: /configServer
+          
+---
+#dev 环境
+spring:
+  profiles: dev,native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file:../config #file:../../config       
+
+eureka.instance.preferIpAddress: true
+eureka.instance.metadataMap.instanceId: ${spring.application.name}:${server.port}
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/
+
+---
+#prod 环境
+spring:
+  profiles: prod,subversion
+  cloud:
+    config:
+      server:
+        svn:
+          uri: https://39.108.137.194/svn/datang/src/main/resources/templates/modules/gen/dao
+          username: dingxi
+          password: dingxi
+          
+eureka.instance.preferIpAddress: true
+eureka.instance.metadataMap.instanceId: ${spring.application.name}:${server.port}
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/
